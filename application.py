@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request,jsonify
-from sam import Main
+from src.utils.sam import Main
 import logging
 import random
 import json
 import torch
-from brain import NeuralNet
-from NeuralNetwork import bag_of_words, tokenize
-from listen import listen
-from speak import say
-from task import NonInputExecution, InputExecution
+from src.components.brain import NeuralNet
+from src.utils.NeuralNetwork import bag_of_words, tokenize
+from src.utils.listen import listen
+from src.utils.speak import say
+from src.utils.task import NonInputExecution, InputExecution
 
 #logging.basicConfig(level=logging.DEBUG,filename="app.log",format='%(asctime)s %(message)s',handlers=[logging.StreamHandler()])
 

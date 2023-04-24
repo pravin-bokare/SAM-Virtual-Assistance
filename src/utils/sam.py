@@ -1,10 +1,10 @@
 import random
 import json
 import torch
-from brain import NeuralNet
+from src.components.brain import NeuralNet
 from NeuralNetwork import bag_of_words, tokenize
-from listen import listen
-from speak import say
+from src.utils.listen import listen
+from src.utils.speak import say
 from task import NonInputExecution, InputExecution
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
